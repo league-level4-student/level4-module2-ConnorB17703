@@ -3,6 +3,9 @@ package StringMethods;
 import java.util.Arrays;
 import java.util.Base64;
 
+//WORK ON THIS CLASS
+
+
 /*
 Visit the JavaDocs for the String class to view everything you can do with a String.  
 
@@ -32,13 +35,35 @@ public class StringMethods {
 
 	// Given Strings s1 and s2, return the longer String
 	public static String longerString(String s1, String s2) {
-		return null;
+		String longestString = "";
+		
+		if(s1.length() > s2.length()){
+			longestString = s1;
+		}else{
+			longestString = s2;
+		}
+		
+		return longestString;
 	}
 
 	
 	// if String s contains the word "underscores", change all of the spaces to underscores
 	public static String formatSpaces(String s) {
-		return null;
+		char letter;
+		String sentence = "";
+		if(s.contains("underscores")){
+			for(int i = 0; i<s.length(); i++){
+				letter = s.charAt(i);
+				if(letter == ' '){
+					sentence += '_';
+				}else{
+					sentence += letter;
+				}
+			}
+		}else{
+			sentence = s;
+		}
+		return sentence;
 	}
 
 	
@@ -47,6 +72,10 @@ public class StringMethods {
 	// assume there is only one space between the first and last name
 	public static String lineLeader(String s1, String s2, String s3) {
 		return null;
+		
+		//***YOU LEFT OFF HERE TO FIGURE OUT HOW TO GET THE STRINGS IN ORDER***
+		
+		
 	}
 	
 	
