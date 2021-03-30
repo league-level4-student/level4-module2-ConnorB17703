@@ -3,7 +3,7 @@ package StringMethods;
 import java.util.Arrays;
 import java.util.Base64;
 
-//WORK ON THIS CLASS
+
 
 
 /*
@@ -71,17 +71,41 @@ public class StringMethods {
 	// You cannot assume there are no extra spaces around the name, but you can
 	// assume there is only one space between the first and last name
 	public static String lineLeader(String s1, String s2, String s3) {
-		return null;
+		String firstName = "";
+		String s1New = s1.trim();
+		String s2New = s2.trim();
+		String s3New = s3.trim();
 		
-		//***YOU LEFT OFF HERE TO FIGURE OUT HOW TO GET THE STRINGS IN ORDER***
+		char s1LastName = s1New.charAt(s1New.length()-1);
+		char s2LastName = s2New.charAt(s2New.length()-1);
+		char s3LastName = s3New.charAt(s3New.length()-1);
+
+		if(s1LastName < s2LastName && s1LastName < s3LastName){
+			firstName = s1New;
+		}else if(s2LastName < s1LastName && s2LastName > s3LastName){
+			firstName = s2New;
+		}
+		firstName = s3New;
 		
-		
+		return firstName;
 	}
 	
 	
 	// Return the sum of all numerical digits in the String
 	public static int numeralSum(String s) {
-		return 0;
+		int sum = 0;
+		int num;
+		String Snew ="";
+		
+		for(int i =0; i< s.length();i++){
+			if(Character.isDigit(s.charAt(i)) == true){
+				Snew = "" + s.charAt(i);
+				num = Integer.parseInt(Snew);
+				sum += num;
+			}
+		}
+		
+		return sum;
 	}
 	
 	

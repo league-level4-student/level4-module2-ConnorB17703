@@ -23,20 +23,20 @@ public class StringMethodsTest {
 	}
 	
 	@Test 
-	void testLineLeader() {
+	public void testLineLeader() {
 		assertEquals("John A", StringMethods.lineLeader("John C", "John B", "John A"));
 		assertEquals("John A", StringMethods.lineLeader(" John C   ", "     John B ", "           John A  "));
 		assertEquals("Charley F", StringMethods.lineLeader("  Allison Z", " Brad H ", " Charley F "));
 	}
 	
-//	@Test
-//	void testNumeralSum() {
-//		assertEquals(0, StringMethods.numeralSum(""));
-//		assertEquals(5, StringMethods.numeralSum("11111"));
-//		assertEquals(3, StringMethods.numeralSum("a1b2c"));
-//		assertEquals(45, StringMethods.numeralSum("x1x2x3x4x5x6x7x8x9x"));
-//	}
-//
+	@Test
+	public void testNumeralSum() {
+		assertEquals(0, StringMethods.numeralSum(""));
+		assertEquals(5, StringMethods.numeralSum("11111"));
+		assertEquals(3, StringMethods.numeralSum("a1b2c"));
+		assertEquals(45, StringMethods.numeralSum("x1x2x3x4x5x6x7x8x9x"));
+	}
+
 //	@Test
 //	void testSubstringCount() {
 //		assertEquals(3, StringMethods.substringCount("subsubsub", "sub"));
