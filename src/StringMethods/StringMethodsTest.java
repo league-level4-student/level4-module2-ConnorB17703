@@ -37,36 +37,36 @@ public class StringMethodsTest {
 		assertEquals(45, StringMethods.numeralSum("x1x2x3x4x5x6x7x8x9x"));
 	}
 
-//	@Test
-//	void testSubstringCount() {
-//		assertEquals(3, StringMethods.substringCount("subsubsub", "sub"));
-//		assertEquals(2, StringMethods.substringCount("s ubsubsu bsubs ub", "sub"));
-//		assertEquals(3, StringMethods.substringCount("Here I'm counting spaces"," "));
-//		assertEquals(0, StringMethods.substringCount("There shoudn't be matches here", "tuna"));
-//	}
-//	
-//	@Test
-//	void testEncrypt() {
-//		assertEquals("KwYPDww=", StringMethods.encrypt("Hello", 'c'));
-//		assertEquals("FCglYAwlISc1JWAvJmABLSE6KS4nYBAyLycyIS0tJTIz", StringMethods.encrypt("The League of Amazing Programmers", '@'));
-//		assertEquals("JBkdFVAEH1AVEQRQAx8dFVAAAhUEChUcAw==", StringMethods.encrypt("Time to eat some pretzels", 'p'));
-//	}
-//	
-//	@Test
-//	void testDecrypt() {
-//		assertEquals("Hello", StringMethods.decrypt("KwYPDww=", 'c'));
-//		assertEquals("The League of Amazing Programmers", StringMethods.decrypt("FCglYAwlISc1JWAvJmABLSE6KS4nYBAyLycyIS0tJTIz" , '@'));
-//		assertEquals("Time to eat some pretzels", StringMethods.decrypt("JBkdFVAEH1AVEQRQAx8dFVAAAhUEChUcAw==", 'p'));
-//	}
-//	
-//	@Test
-//	void testWordsEndWithSubstring() {
-//		assertEquals(3, StringMethods.wordsEndsWithSubstring("He quietly and slowly backed away from the bear that was hungrily looking at him", "ly"));
-//		assertEquals(2, StringMethods.wordsEndsWithSubstring("He was visiting The League of Amazing Programmers.", "ing"));
-//		assertEquals(7, StringMethods.wordsEndsWithSubstring("Here are multiple words that have the same letter at the end.", "e"));
-//		assertEquals(0, StringMethods.wordsEndsWithSubstring("This should give us zero matches", "lemonade"));
-//	}
-//	
+	@Test
+	public void testSubstringCount() {
+		assertEquals(3, StringMethods.substringCount("subsubsub", "sub"));
+		assertEquals(2, StringMethods.substringCount("s ubsubsu bsubs ub", "sub"));
+		assertEquals(3, StringMethods.substringCount("Here I'm counting spaces"," "));
+		assertEquals(0, StringMethods.substringCount("There shoudn't be matches here", "tuna"));
+	}
+	
+	@Test
+	public void testEncrypt() {
+		assertEquals("KwYPDww=", StringMethods.encrypt("Hello", 'c'));
+		assertEquals("FCglYAwlISc1JWAvJmABLSE6KS4nYBAyLycyIS0tJTIz", StringMethods.encrypt("The League of Amazing Programmers", '@'));
+		assertEquals("JBkdFVAEH1AVEQRQAx8dFVAAAhUEChUcAw==", StringMethods.encrypt("Time to eat some pretzels", 'p'));
+	}
+	
+	@Test
+	public void testDecrypt() {
+		assertEquals("Hello", StringMethods.decrypt("KwYPDww=", 'c'));
+		assertEquals("The League of Amazing Programmers", StringMethods.decrypt("FCglYAwlISc1JWAvJmABLSE6KS4nYBAyLycyIS0tJTIz" , '@'));
+		assertEquals("Time to eat some pretzels", StringMethods.decrypt("JBkdFVAEH1AVEQRQAx8dFVAAAhUEChUcAw==", 'p'));
+	}
+	
+	@Test
+	public void testWordsEndWithSubstring() {
+		assertEquals(3, StringMethods.wordsEndsWithSubstring("He quietly and slowly backed away from the bear that was hungrily looking at him", "ly"));
+		assertEquals(2, StringMethods.wordsEndsWithSubstring("He was visiting The League of Amazing Programmers.", "ing"));
+		assertEquals(7, StringMethods.wordsEndsWithSubstring("Here are multiple words that have the same letter at the end.", "e"));
+		assertEquals(0, StringMethods.wordsEndsWithSubstring("This should give us zero matches", "lemonade"));
+	}
+	
 //	@Test
 //	void testDistance() {
 //		assertEquals(6, StringMethods.distance("subsubsubsub", "sub"));
