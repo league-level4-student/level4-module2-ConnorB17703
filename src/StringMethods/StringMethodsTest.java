@@ -67,15 +67,15 @@ public class StringMethodsTest {
 		assertEquals(0, StringMethods.wordsEndsWithSubstring("This should give us zero matches", "lemonade"));
 	}
 	
-//	@Test
-//	void testDistance() {
-//		assertEquals(6, StringMethods.distance("subsubsubsub", "sub"));
-//		assertEquals(7, StringMethods.distance("subsubsubsub", "ub"));
-//		assertEquals(28, StringMethods.distance("The League The Le ague TheLeag ue The League", "League"));
-//		assertEquals(0, StringMethods.distance("bb", "b"));
-//		
-//	}
-//	
+	@Test
+	public void testDistance() {
+		assertEquals(6, StringMethods.distance("subsubsubsub", "sub"));
+		assertEquals(7, StringMethods.distance("subsubsubsub", "ub"));
+		assertEquals(28, StringMethods.distance("The League The Le ague TheLeag ue The League", "League"));
+		assertEquals(0, StringMethods.distance("bb", "b"));
+		
+	}
+	
 //	@Test
 //	void testPalindrome() {
 //		assertTrue(StringMethods.palindrome("ABA"));

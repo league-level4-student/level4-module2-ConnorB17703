@@ -1,5 +1,6 @@
 package StringMethods;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Base64;
 
@@ -136,12 +137,20 @@ public class StringMethods {
 	// Return the number of words in String s that end with String substring
 	// You can assume there are no punctuation marks between words
 	public static int wordsEndsWithSubstring(String s, String substring) {
-		int words = 0;
+		//ArrayList<String> wordsEnds = new ArrayList<>();
+		int wordsEnds = 0;
+		String[] words = s.split(" ");
 		
-		//***YOU STOPED WORKING HERE***
-		//Similar to substringCount method
+		for(int i =0; i<words.length; i++){
+			for(int j =0; j<words[i].length()-substring.length()+1; j++){
+				if(words[i].substring(j+substring.length(), words[i].length()).equals(substring)){
+					wordsEnds++;
+				}
+			}
+		}
 		
-		return words;
+		
+		return wordsEnds;
 	}
 	
 
@@ -149,7 +158,31 @@ public class StringMethods {
 	// of String substring and the final occurrence
 	// You can assume that substring will appear at least twice
 	public static int distance(String s, String substring) {
-		return 0;
+		
+		
+		int firstOIndex = 0;
+		int lastOIndex = 0;
+		
+		
+		//Finding the first occurrence
+			for(int i =0; i<s.length()-substring.length()+1; i++){
+				if(s.substring(i, i+substring.length()).equals(substring)){
+					firstOIndex = i+substring.length();
+					break;
+				}
+			}
+			
+		//Finding the last occurrence
+			for(int i =s.length() - substring.length(); i>=0; i--){
+				if(s.substring(i, i+substring.length()).equals(substring)){
+					lastOIndex = i;
+					break;
+				}
+			}
+		
+			int numOfChar = lastOIndex - firstOIndex;
+		
+		return numOfChar;
 	}
 
 
