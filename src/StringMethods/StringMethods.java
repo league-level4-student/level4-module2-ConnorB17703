@@ -190,9 +190,35 @@ public class StringMethods {
 	// palindromes are words or phrases are read the same forward as backward.
 	// HINT: ignore/remove all punctuation and spaces in the String
 	public static boolean palindrome(String s) {
-		return true;
+		String raw = "";
+		String reversed = "";
+		
+		// removing space and punctuation of s
+		for(int i =0; i<s.length();i++){
+			char c = s.charAt(i);
+			
+			if(Character.isAlphabetic(c)){
+				raw += Character.toLowerCase(c);
+			}
+		}
+		
+		
+		//reversing and comparing raw & reverse
+		for(int j=raw.length()-1; j>=0;j--){
+			reversed += raw.charAt(j);
+		}
+		
+		if(reversed.equals(raw)){
+			System.out.println("true");
+			return true;
+		}
+		
+		System.out.println(raw);
+		System.out.println(reversed);
+		System.out.println("false");
+		
+		return false;
 	}
-	
 }
 
 class Utilities {
